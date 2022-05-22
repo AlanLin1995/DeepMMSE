@@ -114,7 +114,6 @@ def imread(filename, model_path, sigma, num_mask, imsize, mask):
     # imresize
     # im = imresize(im, [imsize, imsize], 'bilinear', mode='F')
     im = cv2.imread(filename, -1)
-    im = cv2.resize(im, (imsize, imsize), interpolation=cv2.INTER_CUBIC)
     im = np.array(im, dtype=np.float32) / 255.
 
     if im.ndim == 2:
